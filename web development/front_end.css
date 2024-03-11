@@ -1,0 +1,13 @@
+ .leftbox { 
+        float:left; 
+        width:25%; 
+            } 
+.rightbox{ 
+         float:right;  
+         width:75%;
+         }
+
+.cell{
+      color: green;
+      font-size: 20px 
+}
