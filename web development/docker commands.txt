@@ -1,8 +1,0 @@
-docker build -t apitest ./
-docker run (-d) -p 9999:9999 apitest
-docker save apitest > apitest.tar
-docker load < apittest.tar
-
-docker tag apitest gnicolai/apitest
-docker login
-docker push gnicolai/apitest

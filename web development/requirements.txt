@@ -1,6 +1,0 @@
-uvicorn[standard]
-fastapi
-aiofiles
-nltk
-matplotlib
-numpy
