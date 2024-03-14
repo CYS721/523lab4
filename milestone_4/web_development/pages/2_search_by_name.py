@@ -22,7 +22,7 @@ submit = st.button("Submit")
 
 if submit:
     st.session_state["my_input"] = my_input
-    mask = df['University Name'].str.contains(my_input)
+    mask = df['University Name'].str.contains(my_input, case=False)
     number_of_result = df[mask].shape[0]
     st.markdown(f'*Available Results: {number_of_result}*')
     
@@ -35,6 +35,6 @@ if submit:
     for d in df_filtered_lst:
         st.write('-------------------------')
         st.write(d['University Name'])
-        st.write('Ranking: ', d['Ranking'])
+        st.write('QS Ranking: ', str(d['Ranking']))
         st.write(d['Corpus Text'])
         
