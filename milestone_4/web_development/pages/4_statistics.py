@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(
-    page_title="Search by Filter",
+    page_title="University Statistics",
     page_icon="👋",
 )
-st.title("Search by Filter")
+st.title("Statistics")
 
 
 # load dataframe
@@ -22,14 +22,3 @@ citysize_lst = df['City Size'].unique().tolist()
 citysize_selection = st.multiselect('City Size:',
                                     citysize_lst,
                                     default=citysize_lst)
-
-mask = (df['City Size'].isin(citysize_selection))
-df_filtered = df[mask]
-
-df_filtered_lst = df_filtered.to_dict('records')
-
-for d in df_filtered_lst:
-    st.write('-------------------------')
-    st.write(d['University Name'])
-    st.write('Ranking: ', d['Ranking'])
-    st.write(d['Corpus Text'])

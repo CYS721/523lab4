@@ -9,7 +9,7 @@ st.set_page_config(
 st.title("Search by Name")
 
 # load dataframe
-filename = 'final_annotation.xlsx'
+filename = 'final_annotation_clean.xlsx'
 df = pd.read_excel(filename, header=0)
 uni_lst = df['University Name'].unique().tolist()
 
